@@ -27,3 +27,6 @@
 
 - [ ] 9주차: 리포트 작성  
 - [ ] 10주차: 오류 점검   
+
+
+### https://github.com/NLPsejong/AML
