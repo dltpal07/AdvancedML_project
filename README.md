@@ -17,7 +17,7 @@
 - [X] 1주차: 주제 선정 
 
 - [X] 2주차: 데이터 완성, 데이터 로드(federated)  
-- [X] 3주차: ~ 데이터 분석 ~  -> 모델 학습(lstm, kobert)
+- [X] 3주차: ~데이터 분석~ 모델 학습(lstm, kobert)
 - [ ] 4주차: 모델(scikit learn bert) 학습   
 - [ ] 5주차: 모델 성능 분석(tensorboard)   
 
