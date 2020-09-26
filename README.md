@@ -18,7 +18,7 @@
 
 - [X] 2주차: 데이터 완성, 데이터 로드 ~(federated)~ 
 - [X] 3주차: ~데이터 분석~ 모델 학습(lstm, kobert)
-- [ ] 4주차: 모델(scikit learn bert) 학습   
+- [ ] 4주차: 1. 모델 분석(lstm, kobert)과 수정 2. federated 학습 적용해보기
 - [ ] 5주차: 모델 성능 분석(tensorboard)   
 
 - [ ] 6주차: 웹(flask) 구상, 프론트 짜기  
