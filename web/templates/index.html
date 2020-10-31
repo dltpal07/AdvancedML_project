@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <title>Title</title>
+    <title>enter your emotion</title>
 </head>
 <body>
     <div class="txt">현재의 기분상태를 표현해주세요!</div>
     <div class="input_space">
         <form action="\post" method="post">
-            <textarea type="text" name='userBusNumber' value="지금 기분을 한문장으로 표현해주세요." id="exp" style="min-width:1000px; min-height: 50px"></textarea>
+            <textarea type="text" name='userBusNumber' value="지금 기분을 한문장으로 표현해주세요." id="exp"></textarea>
             <input type="submit" value="OK">
         </form>
     </div>
@@ -40,4 +40,8 @@
         font-size:70px;
     }
     
+    #exp {
+        width: 80vw;
+        height: 15vh;
+    }
 </style>

@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <title>Title</title>
+    <title>enter your emotion</title>
 </head>
 <body>
     현재 기분은 "{{sentiment}}"로 추정되는 군요.
     "{{value}}"를 토대로 분석한 노래 추천 결과입니다.
     마음에 드시나요? <br><br>
-    만약 현재 기분이 "{{sentiment}}"가 아니라면 어떤 기분인지 선택해주세요!
-    <div>
-        <input type="radio" name="xxx" value="기쁨" checked>기쁨<br>
-        <input type="radio" name="xxx" value="슬픔">슬픔<br>
-        <input type="radio" name="xxx" value="분노">분노<br>
-        <input type="radio" name="xxx" value="놀람">놀람<br>
-    </div>
     <div class="retry">
         <form action="\retry" method="post">
             <input type="submit" value="다시 해보기">
+        </form>
+    </div>
+    만약 현재 기분이 "{{sentiment}}"가 아니라면 어떤 기분인지 선택해주세요!
+  
+    <div class="reindexing">
+        <form action="\reindexing" method="post">
+            <input type="radio" name="xxx" value="기쁨" checked>기쁨<br>
+            <input type="radio" name="xxx" value="슬픔">슬픔<br>
+            <input type="radio" name="xxx" value="분노">분노<br>
+            <input type="radio" name="xxx" value="놀람">놀람<br>
+            <input type="submit" value="제출" onclick="alert('소중한 의견 감사합니다!');">
         </form>
     </div>
     
