@@ -2,30 +2,42 @@
 
 + 사용자가 쓰는 텍스트를 감정 분석하여 해당하는 감정에 관련된 노래를 멜론에서 틀어줌.  
 
-+ 사용자가 쓰는 텍스트의 보안을 위해 federated learning을 이용함.  
++ 사용자가 쓰는 텍스트의 개인정보 보호를 위해 federated learning을 이용함.    
 
-+ 데모 웹  
-1. 메모장이 뜸.  
-2. 텍스트 입력함.  
-3. 모델 학습하여 감정 출력함.  
-4. 버튼 누르면 감정에 어울리는 노래 멜론 연동하여 틀어줌.  
+## 사용자 감정 기반 음악 추천 서비스(v1)  
+> Data: 기쁨 슬픔 우울 분노 설렘  
+> Model: lstm, kobert  
 
-> 마감 기한 11월 16일 밤 11시 59분 까지     
+### ISSUE
++ 슬픔과 우울 데이터의 유사도가 높음.  
+![image](https://user-images.githubusercontent.com/44723287/98562749-bb4e5a80-22ed-11eb-8645-6dc8cad9f16a.png)
 
+## 사용자 감정 기반 음악 추천 서비스(v2)
+> Data: 기쁨 슬픔 분노 놀람
+> Model: lstm, kobert
 
+### ISSUE
++ 분노감정의 텍스트를 슬픔으로 혼동함.     
+![image](https://user-images.githubusercontent.com/44723287/98563657-c6ee5100-22ee-11eb-9b4d-26bf513def28.png)  
+  
++ lstm, kobert 모델의 학습곡선에서 overfitting을 확인함.   
+![image](https://user-images.githubusercontent.com/44723287/98563580-afaf6380-22ee-11eb-8a31-4733eab6229f.png)  
 
-- [X] 1주차: 주제 선정 
++ 각 클래스별 데이터 개수가 동일하지 않아서 편향될 가능성이 높음.  
 
-- [X] 2주차: 데이터 완성, 데이터 로드 ~(federated)~ 
-- [X] 3주차: ~데이터 분석~ 모델 학습(lstm, kobert)
-- [X] 4주차: web, federated 학습 
-- [X] 5주차: web노래추천 연동, federated학습, 데이터 분석(유사도 계산)
+## 사용자 감정 기반 음악 추천 서비스(v3)
++ pretrain 모델이 들어간 kobert로 모델 결정
++ 오버피팅 문제 해결하기 위해 kobert dropout = 0.5 -> 0.3
++ 데이터의 독립성과 양을 위해 놀람과 공포를 포함하는 감정인 불안으로 변경
 
-- [ ] 6주차: 중간고사 
-- [ ] 7주차: 데이터 분석, 데이터 시각화, federated 적용 : 웹에서 잘못 예측한 경우 사용자로부터 라벨을 입력받아서 학습할 수 있도록 한다. 
-- [ ] 8주차: 학습 파라미터 조정 
-- [ ] 9주차: 리포트 작성  
-- [ ] 10주차: 오류 점검   
+> Data: 기쁨 슬픔 분노 불안 (각 8000개)
+> Model: kobert
 
++ F1 score and confusion matrix
+![image](https://user-images.githubusercontent.com/44723287/98563822-fa30e000-22ee-11eb-9daf-1a0b64b985b3.png)
 
-### https://github.com/NLPsejong/AML
++ Word 2 Vec Embedding Projector (기쁨, 불안, 슬픔, 화남)
+![happy_embedding](https://user-images.githubusercontent.com/44723287/98563973-23517080-22ef-11eb-945f-c8e5572bb107.gif)
+![unstable_embedding](https://user-images.githubusercontent.com/44723287/98563998-2a787e80-22ef-11eb-8eda-bcfe77b6336d.gif)
+![sad_embedding](https://user-images.githubusercontent.com/44723287/98563990-277d8e00-22ef-11eb-9efa-a22ea40020cd.gif)
+![angry_embedding](https://user-images.githubusercontent.com/44723287/98563943-1c2a6280-22ef-11eb-9822-afe97929d3f1.gif)
