@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Noto+Sans+KR&display=swap" rel="stylesheet">
 
     <!-- user sytle-->
-    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="index.css">
 
 </head>
 
@@ -91,6 +91,22 @@
                     <div class="icon"><span><i class="fas fa-music"></i></span></div>
                     <div class="about">Healing with Music</div>
                     <div class="content">그 감정을 기반으로 추천된 노래로 즐겨보세요~</div>
+                </div>
+            </div>
+        </section>
+        <section class="service-area" id="service">
+            <div class="title">
+                SERVICE
+            </div>
+            <div class="container">
+                <div class="item">
+                    <div class="service">감정을 입력해주세요.</div>
+                </div>
+                <div class="input-space">
+                    <form action="\post" method="post" class="input-form">
+                        <textarea type="text" name='userBusNumber' value="지금 기분을 한문장으로 표현해주세요." class="input-text"></textarea>
+                        <input type="submit" value="제출" class="input-btn">
+                    </form>
                 </div>
             </div>
         </section>
@@ -388,7 +404,7 @@
     </div>
 
     <!-- user script -->
-    <script src="web.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
