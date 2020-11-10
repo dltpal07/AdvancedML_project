@@ -447,7 +447,60 @@ section {
     padding: 0px 0;
 }
 
+/* Service AREA */
+.service-area {
+    height: auto;
+    background-color: #f9f9ff;
+}
 
+.service-area>.container {
+    text-align: center;
+}
+
+.service-area>.container>.item {
+    height: auto;
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+    transition: all 0.5s ease;
+}
+
+.service-area>.container>.item:hover {
+    transform: scale(1.015);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.service-area>.container>.item>.service {
+    font-size: 32px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.service-area>.container>.input-space {
+    height: auto;
+    width: auto;
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+    transition: all 0.5s ease;
+}
+.service-area>.container>.input-space>.input-form>.input-text {
+    height: auto;
+    width: calc(90% - 40px);
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+    transition: all 0.5s ease;
+}
+.service-area>.container>.input-space>.input-form>.input-btn {
+    height: 20px;
+    width: 40px;
+    text-align: left;
+    font-size: 15px;
+}
 /* TECHNOLOGY AREA */
 
 .technology-area {
