@@ -429,79 +429,25 @@ section {
 }
 
 .about-area>.container>.item>.icon>span>i {
-    font-size: 48px;
+    font-size: 32px;
     color: #aaa;
 }
 
 .about-area>.container>.item>.about {
-    font-size: 32px;
+    font-size: 24px;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
-    padding: 10px 0;
+    padding: 0px 0;
 }
 
 .about-area>.container>.item>.content {
-    font-size: 22px;
+    font-size: 18px;
     font-family: 'Noto Sans KR', sans-serif;
     letter-spacing: 1.5px;
-    padding: 10px 0;
+    padding: 0px 0;
 }
 
-/* ABOUT AREA */
 
-.service-area {
-    height: auto;
-    background-color: #f9f9ff;
-}
-
-.service-area>.container {
-    text-align: center;
-}
-
-.service-area>.container>.item {
-    height: auto;
-    background-color: white;
-    padding: 20px;
-    margin: 20px;
-    text-align: left;
-    transition: all 0.5s ease;
-}
-
-.service-area>.container>.item:hover {
-    transform: scale(1.015);
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-}
-
-.service-area>.container>.item>.service {
-    font-size: 32px;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: bold;
-    padding: 10px 0;
-}
-.service-area>.container>.input-space {
-    height: auto;
-    width: auto;
-    background-color: white;
-    padding: 20px;
-    margin: 20px;
-    text-align: left;
-    transition: all 0.5s ease;
-}
-.service-area>.container>.input-space>.input-form>.input-text {
-    height: auto;
-    width: calc(90% - 40px);
-    background-color: white;
-    padding: 20px;
-    margin: 20px;
-    text-align: left;
-    transition: all 0.5s ease;
-}
-.service-area>.container>.input-space>.input-form>.input-btn {
-    height: 20px;
-    width: 40px;
-    text-align: left;
-    font-size: 15px;
-}
 /* TECHNOLOGY AREA */
 
 .technology-area {
@@ -530,7 +476,7 @@ section {
 }
 
 .technology-area>.container>.filterItem {
-    display: inline-block;
+    display: none;
     width: calc(100% - 40px);
     margin: 20px;
     text-align: center;
@@ -538,7 +484,7 @@ section {
 
 @media (min-width: 992px) {
     .technology-area>.container>.filterItem {
-        width: calc(50% - 40px);
+        width: calc(25% - 40px);
     }
 }
 
@@ -553,4 +499,141 @@ section {
 
 @media (min-width: 992px) {
     .technology-area>.container>.filterItem>.image {}
+}
+
+.technology-area>.container>.filterItem>.image>.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.technology-area>.container>.filterItem>.image:hover>.overlay {
+    background-image: linear-gradient(to right, orange, lightgreen);
+    opacity: 0.9;
+}
+
+.technology-area>.container>.filterItem>.image:hover>.overlay>i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 48px;
+}
+
+.technology-area>.container>.filterItem>.image>img {
+    border-radius: 5px;
+}
+
+.technology-area>.container>.filterItem>.main {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.technology-area>.container>.filterItem>.sub {
+    font-size: 16px;
+    color: #777;
+}
+
+.technology-area>.container>.filterItem>.text {
+    display: none;
+}
+
+#technologyModal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    overflow: hidden;
+}
+
+#technologyModal>.close {
+    display: block;
+    text-align: right;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: hold;
+    transition: 0.3s;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+#technologyModal>.close:hover,
+#technologyModal>.close:focus {
+    color: #bbb;
+}
+
+#technologyModal>.container {
+    width: 100%;
+    height: 70%;
+}
+
+#technologyModal>.container>img {
+    width: calc(100% - 40px);
+    padding: 0px;
+}
+
+@media (min-width: 992px) {
+    #technologyModal>.container>img {
+        max-width: 700px;
+    }
+}
+
+#technologyModal>.container>.modal-main {
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 0;
+}
+
+#technologyModal>.container>.modal-sub {
+    font-size: 20px;
+    color: white;
+    padding: 10px 0;
+}
+
+#technologyModal>.container>.modal-text {
+    font-size: 16px;
+    color: #bbb;
+}
+
+
+/* Footer area */
+
+.footer-area {
+    height: auto;
+    text-align: center;
+    background-color: black;
+}
+
+.footer-area * {
+    color: white;
+}
+
+.footer-area>.sns>.item {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.footer-area>.sns>.item>i {
+    font-size: 24px;
+}
+
+.footer-area>.info>p {
+    font-size: 16px;
+    padding: 10px 0;
 }
