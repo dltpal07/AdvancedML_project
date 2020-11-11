@@ -429,7 +429,9 @@
 
                 <div class="review-slide res-show">
                     <div class="image">
-                        <img src="img/sh.jpg">
+                        {% if True %}
+                        <img src="{{ url_for('static', filename=sh_image) }}">
+                        {% endif %}
                     </div>
                     <div class="name">
                         권수현
@@ -447,7 +449,9 @@
                 </div>
                 <div class="review-slide show">
                     <div class="image">
-                        <img src="img/sj.jpg">
+                        {% if True %}
+                        <img src="{{ url_for('static', filename=sj_image) }}">
+                        {% endif %}
                     </div>
                     <div class="name">
                         박세정
@@ -465,7 +469,9 @@
                 </div>
                 <div class="review-slide show">
                     <div class="image">
-                        <img src="img/cat.jpg">
+                        {% if True %}
+                        <img src="{{ url_for('static', filename=cat_image) }}">
+                        {% endif %}
                     </div>
                     <div class="name">
                         고양이
@@ -483,7 +489,9 @@
                 </div>
                 <div class="review-slide hide">
                     <div class="image">
-                        <img src="img/sh.jpg">
+                        {% if True %}
+                        <img src="{{ url_for('static', filename=sh_image) }}">
+                        {% endif %}
                     </div>
                     <div class="name">
                         권수현
@@ -501,7 +509,9 @@
                 </div>
                 <div class="review-slide hide">
                     <div class="image">
-                        <img src="img/sj.jpg">
+                        {% if True %}
+                        <img src="{{ url_for('static', filename=sj_image) }}">
+                        {% endif %}
                     </div>
                     <div class="name">
                         박세정
@@ -519,7 +529,9 @@
                 </div>
                 <div class="review-slide hide">
                     <div class="image">
-                        <img src="img/cat.jpg">
+                        {% if True %}
+                        <img src="{{ url_for('static', filename=cat_image) }}">
+                        {% endif %}
                     </div>
                     <div class="name">
                         고양이
