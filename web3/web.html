@@ -19,8 +19,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Noto+Sans+KR&display=swap" rel="stylesheet">
 
     <!-- user sytle-->
-    <link rel="stylesheet" href="web.css">
-
+    <!-- <link rel="stylesheet" href="web.css"> -->
+    {% if True %}
+    <link rel="stylesheet" href="{{ url_for('static', filename=css_path) }}">
+    {% endif %}
 </head>
 
 <body>
@@ -44,19 +46,30 @@
         <div class="welcome-area">
             <div class="container">
                 <div class=" image-slide fade">
-                    <img src="img/about.jpg">
+                    {% if True %}
+                    <img src="{{ url_for('static', filename=about_image) }}">
+                    {% endif %}
+                    <!-- <img src="img/about.jpg"> -->
                 </div>
                 <div class=" image-slide fade">
-                    <img src="img/service.jpg">
+                    {% if True %}
+                    <img src="{{ url_for('static', filename=service_image) }}">
+                    {% endif %}
                 </div>
                 <div class=" image-slide fade">
-                    <img src="img/tech.jpg">
+                    {% if True %}
+                    <img src="{{ url_for('static', filename=tech_image) }}">
+                    {% endif %}
                 </div>
                 <div class=" image-slide fade">
-                    <img src="img/review.jpg">
+                    {% if True %}
+                    <img src="{{ url_for('static', filename=review_image) }}">
+                    {% endif %}
                 </div>
                 <div class=" image-slide fade">
-                    <img src="img/dev.jpg">
+                    {% if True %}
+                    <img src="{{ url_for('static', filename=dev_image) }}">
+                    {% endif %}
                 </div>
 
                 <a class="image-prev" id="imagePrev">&#10094;</a>
@@ -103,15 +116,16 @@
                 <div class="item">
                     <div class="service">감정을 입력해주세요.</div>
                 </div>
-                <div class="input-space">
-                    <form action="\post" method="post" class="input-form">
-                        <textarea type="text" name='userBusNumber' value="지금 기분을 한문장으로 표현해주세요." class="input-text"></textarea>
-                        <input type="submit" value="제출" class="input-btn">
-                    </form>
-                </div>
+                
+            </div>
+            <div>
+                <form action="\post" method="post">
+                    <textarea type="text" name='userBusNumber' value="지금 기분을 한문장으로 표현해주세요."></textarea>
+                    <input type="submit" value="제출">
+                </form>
             </div>
         </section>
-
+        
         <section class="technology-area" id="technology">
             <div class="title">
                 TECHNOLOGY
@@ -135,7 +149,9 @@
                 <div class="filterItem data">
                     <div class="image">
                         <div class="overlay"><i class="far fa-image"></i></div>
-                        <img src="img/data/wordcloud/happy.png" style="width: 80%;">
+                        {% if True %}
+                        <img src="{{ url_for('static', filename=happy_image) }}" style="width: 80%;">
+                        {% endif %}
                     </div>
                     <div class="main">
                         Happy
@@ -151,7 +167,9 @@
                 <div class="filterItem data">
                     <div class="image">
                         <div class="overlay"><i class="far fa-image"></i></div>
-                        <img src="img/data/embeddingprojector/happy_embedding.gif">
+                        {% if True %}
+                        <img src="{{ url_for('static', filename=happy_embedding_gif) }}">
+                        {% endif %}
                     </div>
                     <div class="main">
 
@@ -167,7 +185,9 @@
                 <div class="filterItem data">
                     <div class="image">
                         <div class="overlay"><i class="far fa-image"></i></div>
-                        <img src="img/data/wordcloud/unstable.png" style="width: 80%;">
+                        {% if True %}
+                        <img src="{{ url_for('static', filename=unstable_image) }}" style="width: 80%;">
+                        {% endif %}
                     </div>
                     <div class="main">
                         Unstable
@@ -183,7 +203,9 @@
                 <div class="filterItem data">
                     <div class="image">
                         <div class="overlay"><i class="far fa-image"></i></div>
-                        <img src="img/data/embeddingprojector/unstable_embedding.gif">
+                        {% if True %}
+                        <img src="{{ url_for('static', filename=unstable_embedding_gif) }}">
+                        {% endif %}
                     </div>
                     <div class="main">
 
@@ -199,7 +221,9 @@
                 <div class="filterItem data">
                     <div class="image">
                         <div class="overlay"><i class="far fa-image"></i></div>
-                        <img src="img/data/wordcloud/sad.png" style="width: 80%;">
+                        {% if True %}
+                        <img src="{{ url_for('static', filename=sad_image) }}" style="width: 80%;">
+                        {% endif %}
                     </div>
                     <div class="main">
                         Sad
@@ -215,7 +239,9 @@
                 <div class="filterItem data">
                     <div class="image">
                         <div class="overlay"><i class="far fa-image"></i></div>
-                        <img src="img/data/embeddingprojector/sad_embedding.gif">
+                        {% if True %}
+                        <img src="{{ url_for('static', filename=sad_embedding_gif) }}">
+                        {% endif %}
                     </div>
                     <div class="main">
 
@@ -231,7 +257,9 @@
                 <div class="filterItem data">
                     <div class="image">
                         <div class="overlay"><i class="far fa-image"></i></div>
-                        <img src="img/data/wordcloud/angry.png" style="width: 80%;">
+                        {% if True %}
+                        <img src="{{ url_for('static', filename=angry_image) }}" style="width: 80%;">
+                        {% endif %}
                     </div>
                     <div class="main">
                         Angry
@@ -247,7 +275,9 @@
                 <div class="filterItem data">
                     <div class="image">
                         <div class="overlay"><i class="far fa-image"></i></div>
-                        <img src="img/data/embeddingprojector/angry_embedding.gif">
+                        {% if True %}
+                        <img src="{{ url_for('static', filename=angry_embedding_gif) }}">
+                        {% endif %}
                     </div>
                     <div class="main">
 
@@ -263,7 +293,9 @@
                 <div class="filterItem model">
                     <div class="image">
                         <div class="overlay"><i class="far fa-image"></i></div>
-                        <img src="img/model/bert_traingraph/bertacc(epoch=5).png">
+                        {% if True %}
+                        <img src="{{ url_for('static', filename=bertacc_image) }}">
+                        {% endif %}
                     </div>
                     <div class="main">
                         Accuracy
@@ -281,7 +313,9 @@
                 <div class="filterItem model">
                     <div class="image">
                         <div class="overlay"><i class="far fa-image"></i></div>
-                        <img src="img/model/bert_traingraph/bertloss(epoch=5).png">
+                        {% if True %}
+                        <img src="{{ url_for('static', filename=bertloss_image) }}">
+                        {% endif %}
                     </div>
                     <div class="main">
                         Loss
@@ -297,7 +331,9 @@
                 <div class="filterItem model">
                     <div class="image">
                         <div class="overlay"><i class="far fa-image"></i></div>
-                        <img src="img/model/classification_report.PNG">
+                        {% if True %}
+                        <img src="{{ url_for('static', filename=classification_report_image) }}">
+                        {% endif %}
                     </div>
                     <div class="main">
                         Classification Report
@@ -313,7 +349,9 @@
                 <div class="filterItem model">
                     <div class="image">
                         <div class="overlay"><i class="far fa-image"></i></div>
-                        <img src="img/model/confusioin_matrix.png">
+                        {% if True %}
+                        <img src="{{ url_for('static', filename=confusion_matrix_image) }}">
+                        {% endif %}
                     </div>
                     <div class="main">
                         Confusion Matrix
@@ -334,7 +372,9 @@
                 DEVELOPER
             </div>
             <div class="picture">
-                <img src="img/we.jpg">
+                {% if True %}
+                <img src="{{ url_for('static', filename=we_image) }}">
+                {% endif %}
                 <div class="name">김해린(Haerin Kim) 이세미(Semi Lee)</div>
 
             </div>
@@ -402,7 +442,9 @@
     </div>
 
     <!-- user script -->
-    <script src="web.js"></script>
+    {% if True %}
+    <script src="{{ url_for('static', filename=js_path) }}"></script>
+    {% endif %}
 </body>
 
 </html>

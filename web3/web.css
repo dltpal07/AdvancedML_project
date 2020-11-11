@@ -477,7 +477,7 @@ section {
     font-weight: bold;
     padding: 10px 0;
 }
-.service-area>.container>.input-space {
+/* .service-area>.container>.input-space {
     height: auto;
     width: auto;
     background-color: white;
@@ -485,16 +485,15 @@ section {
     margin: 20px;
     text-align: left;
     transition: all 0.5s ease;
-}
-.service-area>.container>.input-space>.input-form>.input-text {
+} */
+/* .service-area>.container>.input-space>.input-form>.input-txt {
     height: auto;
     width: calc(90% - 40px);
     background-color: white;
     padding: 20px;
     margin: 20px;
     text-align: left;
-    transition: all 0.5s ease;
-}
+} */
 .service-area>.container>.input-space>.input-form>.input-btn {
     height: 20px;
     width: 40px;
