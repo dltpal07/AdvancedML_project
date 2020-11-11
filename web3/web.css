@@ -296,7 +296,7 @@ section {
     width: 100px;
     height: 10px;
     margin: 0 auto;
-    background-image: linear-gradient(to right, orange, lightgreen);
+    background-image: linear-gradient(to right, lightcoral, aquamarine);
 }
 
 
@@ -394,7 +394,7 @@ section {
 }
 
 .developer-area>.text>.sns>a:hover {
-    background-image: linear-gradient(to right, navy, aquamarine);
+    background-image: linear-gradient(to right, lightcoral, aquamarine);
 }
 
 
@@ -447,7 +447,9 @@ section {
     padding: 0px 0;
 }
 
+
 /* Service AREA */
+
 .service-area {
     height: auto;
     background-color: #f9f9ff;
@@ -477,29 +479,51 @@ section {
     font-weight: bold;
     padding: 10px 0;
 }
-/* .service-area>.container>.input-space {
+
+
+.service-area>.container>.input-space {
     height: auto;
     width: auto;
     background-color: white;
     padding: 20px;
     margin: 20px;
-    text-align: left;
     transition: all 0.5s ease;
-} */
-/* .service-area>.container>.input-space>.input-form>.input-txt {
-    height: auto;
+
+}
+
+.service-area>.container>.input-space>.input-form>.input-text {
     width: calc(90% - 40px);
-    background-color: white;
     padding: 20px;
     margin: 20px;
-    text-align: left;
-} */
-.service-area>.container>.input-space>.input-form>.input-btn {
-    height: 20px;
-    width: 40px;
-    text-align: left;
-    font-size: 15px;
+
+    font-size: 32px;
+    background-color: rgb(243, 174, 174);
+    font-family: 'Noto Sans KR', sans-serif;
 }
+
+.service-area>.container>.input-space>.input-form>.input-btn {
+    border-radius: 15px;
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    font-size: 28px;
+    cursor: pointer;
+    float: right;
+    background-color: white;
+    border-style: none;
+}
+
+.service-area>.container>.input-space>.icon {
+    display: inline-block;
+    float: right;
+}
+
+.service-area>.container>.input-space>.icon>span>i {
+    font-size: 48px;
+    color: black;
+}
+
+
 /* TECHNOLOGY AREA */
 
 .technology-area {
@@ -565,7 +589,7 @@ section {
 }
 
 .technology-area>.container>.filterItem>.image:hover>.overlay {
-    background-image: linear-gradient(to right, orange, lightgreen);
+    background-image: linear-gradient(to right, lightcoral, aquamarine);
     opacity: 0.9;
 }
 
@@ -660,6 +684,122 @@ section {
 #technologyModal>.container>.modal-text {
     font-size: 16px;
     color: #bbb;
+}
+
+
+/* REVIEW AREA */
+
+.review-area {
+    height: auto;
+    background-color: #f9f9ff;
+}
+
+.review-area>.container {
+    position: relative;
+    text-align: center;
+    background-color: white;
+    margin: 20px;
+    padding: 40px;
+}
+
+@media (min-width: 992px) {
+    .review-area>.container {
+        padding: 20px 0;
+    }
+}
+
+.review-area>.container>.review-prev,
+.review-area>.container>.review-next {
+    display: inline-block;
+    position: absolute;
+    top: 50px;
+    transform: translateY(-50%);
+    color: gray;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.review-area>.container>.review-prev {
+    left: 0;
+}
+
+.review-area>.container>.review-next {
+    right: 0;
+}
+
+.review-area>.container>.review-prev:hover,
+.review-area>.container>.review-next:hover {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.review-area>.container>.review-slide {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+
+@media (min-width: 992px) {
+    .review-area>.container>.review-slide {
+        width: 300px;
+    }
+}
+
+.review-area>.container>.review-slide.res-show {
+    display: inline-block;
+}
+
+.review-area>.container>.review-slide.show {
+    display: none;
+}
+
+@media(min-width: 992px) {
+    .review-area>.container>.review-slide.show {
+        display: inline-block;
+    }
+}
+
+.review-area>.container>.review-slide.hide {
+    display: none;
+}
+
+.review-area>.container>.review-slide>.image {
+    display: inline-block;
+}
+
+.review-area>.container>.review-slide>.image>img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.review-area>.container>.review-slide>.name {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.review-area>.container>.review-slide>.text {
+    padding: 30px;
+}
+
+.review-area>.container>.review-slide>.text>i {
+    font-size: 16px;
+    color: gray;
+}
+
+.review-area>.container>.review-slide>.rating {
+    text-align: right;
+    padding: 10px;
+}
+
+.review-area>.container>.review-slide>.rating>span {
+    font-size: 14px;
+    color: orange;
 }
 
 
