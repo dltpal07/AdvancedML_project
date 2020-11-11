@@ -480,7 +480,6 @@ section {
     padding: 10px 0;
 }
 
-
 .service-area>.container>.input-space {
     height: auto;
     width: auto;
@@ -488,14 +487,12 @@ section {
     padding: 20px;
     margin: 20px;
     transition: all 0.5s ease;
-
 }
 
 .service-area>.container>.input-space>.input-form>.input-text {
     width: calc(90% - 40px);
     padding: 20px;
     margin: 20px;
-
     font-size: 32px;
     background-color: rgb(243, 174, 174);
     font-family: 'Noto Sans KR', sans-serif;
@@ -513,6 +510,30 @@ section {
     border-style: none;
 }
 
+.service-area>.container>.retry>.input-btn {
+    border-radius: 15px;
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    font-size: 26px;
+    cursor: pointer;
+    float: right;
+    background-color: white;
+    border-style: none;
+}
+
+.service-area>.container>.reindexing>.input-btn {
+    border-radius: 15px;
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    font-size: 28px;
+    cursor: pointer;
+    float: right;
+    background-color: white;
+    border-style: none
+}
+
 .service-area>.container>.input-space>.icon {
     display: inline-block;
     float: right;
@@ -521,6 +542,30 @@ section {
 .service-area>.container>.input-space>.icon>span>i {
     font-size: 48px;
     color: black;
+}
+
+.service-area>.container>.retry {
+    border-radius: 15px;
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    font-size: 28px;
+    cursor: pointer;
+    float: right;
+    background-color: white;
+    border-style: none;
+}
+
+.service-area>.container>.reindexing {
+    border-radius: 15px;
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    font-size: 28px;
+    cursor: pointer;
+    float: right;
+    background-color: white;
+    border-style: none;
 }
 
 
