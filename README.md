@@ -1,12 +1,9 @@
 ## 사용자 감정 기반 음악 추천 서비스 (V3: 기쁨 슬픔 분노 놀람)
 
-<<<<<<< HEAD
 + 슬픔 데이터에서 "화나", "화가" 단어가 들어간 문장 삭제
 + lstm의 추론이 불안정하고 성능이 낮아서 pretrain 모델이 들어간 kobert로 모델 결정
 + 오버피팅 문제 해결하기 위해 kobert dropout = 0.5 -> 0.3, 클래스별 데이터 갯수 동일하게 하기
-=======
 + 사용자가 쓰는 텍스트를 감정 분석하여 해당하는 감정에 관련된 노래를 멜론에서 틀어줌.  
-
 + 사용자가 쓰는 텍스트의 개인정보 보호를 위해 federated learning을 이용함.    
 
 ## 사용자 감정 기반 음악 추천 서비스(v1)  
@@ -46,4 +43,3 @@
 ![unstable_embedding](https://user-images.githubusercontent.com/44723287/98563998-2a787e80-22ef-11eb-8eda-bcfe77b6336d.gif)
 ![sad_embedding](https://user-images.githubusercontent.com/44723287/98563990-277d8e00-22ef-11eb-9efa-a22ea40020cd.gif)
 ![angry_embedding](https://user-images.githubusercontent.com/44723287/98563943-1c2a6280-22ef-11eb-9822-afe97929d3f1.gif)
->>>>>>> 1fcf230ac910b7f736bdb47f237be712354b838b
